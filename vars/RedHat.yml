@@ -1,0 +1,8 @@
+---
+
+freeipa_client_packages:
+  - ipa-client
+  - realmd
+  - dbus-python
+
+

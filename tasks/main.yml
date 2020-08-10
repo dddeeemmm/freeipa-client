@@ -1,0 +1,7 @@
+---
+
+- include: asserts.yml
+- include_vars: '{{ ansible_distribution }}.yml'
+- include: config.yml
+- include: install.yml
+- include: freeipa-client-install.yml

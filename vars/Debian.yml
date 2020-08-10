@@ -1,0 +1,5 @@
+---
+
+freeipa_client_packages:
+  - freeipa-client
+  - realmd

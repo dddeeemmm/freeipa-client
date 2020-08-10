@@ -1,0 +1,15 @@
+---
+
+- name: assert supported distribution
+  assert:
+    that:
+      - ansible_distribution + '-' + ansible_distribution_major_version in freeipa_client_supported_distributions
+
+- name: assert required variables
+  assert:
+    that:
+      - freeipa_client_domain is defined
+      - freeipa_client_server is defined
+      - freeipa_client_realm is defined
+      - freeipa_client_principal is defined
+      - freeipa_client_password is defined

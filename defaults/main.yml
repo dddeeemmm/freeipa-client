@@ -1,0 +1,26 @@
+---
+
+freeipa_client_dns_server: []
+freeipa_client_server: []
+
+freeipa_client_install_base_command: ipa-client-install --unattended
+freeipa_client_install_options:
+  - '--domain={{ freeipa_client_domain }}'
+  - '--server={{ freeipa_client_server | random }}'
+  - '--realm={{ freeipa_client_realm }}'
+  - '--principal={{ freeipa_client_principal }}'
+  - '--password={{ freeipa_client_password }}'
+  - '--hostname={{ freeipa_client_fqdn }}'
+  - '--mkhomedir'
+  - '--enable-dns-updates'
+  - '--force-join'
+
+freeipa_client_domain: '{{ freeipa_client_realm | lower }}'
+freeipa_client_realm: ''
+
+freeipa_client_principal: ''
+freeipa_client_password: ''
+
+freeipa_client_fqdn: '{{ ansible_fqdn }}'
+
+

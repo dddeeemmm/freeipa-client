@@ -1,0 +1,4 @@
+---
+
+freeipaclient_packages:
+ - freeipa-client
