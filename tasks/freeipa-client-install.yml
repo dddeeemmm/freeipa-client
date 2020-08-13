@@ -4,4 +4,4 @@
   args:
     creates: /etc/ipa/default.conf
   command: "{{ freeipa_client_install_base_command }} {{ freeipa_client_install_options | join(' ') }}"
-  no_log: true
+  no_log: '{{ nolog }}'

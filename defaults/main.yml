@@ -23,4 +23,4 @@ freeipa_client_password: ''
 
 freeipa_client_fqdn: '{{ ansible_fqdn }}'
 
-
+nolog: true
