@@ -1,12 +1,16 @@
 ---
 
 freeipa_client_dns_server: []
-freeipa_client_server: []
+freeipa_client_server: '{{ freeipa_client_servers | random }}'
+freeipa_client_servers:
+  - 'ipa-1'
+  - 'ipa-2'
+  - 'ipa-3'
 
 freeipa_client_install_base_command: ipa-client-install --unattended
 freeipa_client_install_options:
   - '--domain={{ freeipa_client_domain }}'
-  - '--server={{ freeipa_client_server | random }}'
+  - '--server={{ freeipa_client_server }}'
   - '--realm={{ freeipa_client_realm }}'
   - '--principal={{ freeipa_client_principal }}'
   - '--password={{ freeipa_client_password }}'

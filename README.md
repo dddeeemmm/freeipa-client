@@ -18,7 +18,7 @@ Role Variables
     
     freeipa_client_install_options          [default:
                                               - '--domain={{ freeipa_client_domain }}'
-                                              - '--server={{ freeipa_client_server | random }}'
+                                              - '--server={{ freeipa_client_server }}'
                                               - '--realm={{ freeipa_client_realm }}'
                                               - '--principal={{ freeipa_client_principal }}'
                                               - '--password={{ freeipa_client_password }}'
